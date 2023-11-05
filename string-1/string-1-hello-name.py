@@ -1,7 +1,5 @@
 import unittest
 
-# Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
-
 class TestStringMethods(unittest.TestCase):
 
     def test_hello_name(self):

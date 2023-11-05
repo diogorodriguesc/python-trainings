@@ -9,5 +9,3 @@ else:
     print("Odd")
 
 print("Done with condition")
-
-

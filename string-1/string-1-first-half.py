@@ -1,7 +1,5 @@
 import unittest
 
-# Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
-
 class TestStringMethods(unittest.TestCase):
 
     def test_first_half(self):
