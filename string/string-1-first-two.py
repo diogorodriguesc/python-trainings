@@ -2,7 +2,7 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_first_half(self):
+    def test_first_two(self):
         self.assertEqual(first_two("Hello"), "He")
         self.assertEqual(first_two("java"), "ja")
         self.assertEqual(first_two("Hi"), "Hi")

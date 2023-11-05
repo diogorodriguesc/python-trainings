@@ -2,7 +2,7 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_first_half(self):
+    def test_make_tags(self):
         self.assertEqual(make_tags("i", "Hello World!"), "<i>Hello World!</i>")
 
 def make_tags(tag, word):

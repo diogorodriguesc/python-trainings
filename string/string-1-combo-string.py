@@ -2,7 +2,7 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_first_half(self):
+    def test_combo_string(self):
         self.assertEqual(combo_string("Hello", "hi"), "hiHellohi")
         self.assertEqual(combo_string("hi", "Hello"), "hiHellohi")
 

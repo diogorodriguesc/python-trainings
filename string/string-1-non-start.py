@@ -2,7 +2,7 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_make_out_word(self):
+    def test_extra_end(self):
         self.assertEqual(extra_end("Hello"), 'lololo')
         self.assertEqual(extra_end("ab"), 'ababab')
         self.assertEqual(extra_end("Hi"), 'HiHiHi')

@@ -16,7 +16,7 @@ def first_half(str):
     if (half_str%2 != 0):
         raise Exception(str + " length is not even")
 
-    half_str = int(half_str);
+    half_str = int(half_str)
 
     return str[:half_str]
 

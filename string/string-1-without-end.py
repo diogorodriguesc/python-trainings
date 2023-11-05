@@ -2,7 +2,7 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
-    def test_first_half(self):
+    def test_without_end(self):
         self.assertEqual(without_end("Hello"), "ell")
         self.assertEqual(without_end("java"), "av")
         self.assertEqual(without_end("coding"), "odin")
