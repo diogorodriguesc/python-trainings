@@ -35,3 +35,7 @@ city.set_district('Aveiro')
 print(city.district())
 
 # city.__set_postalCode(4300) -> as __set_postalCode is private not accessible
+
+# print(len(city)) # Error: TypeError: object of type 'City' has no len()
+print(city) # Outputs: <__main__.City object at 0x100740890>
+print([city]) # Outputs: [<__main__.City object at 0x100740890>]

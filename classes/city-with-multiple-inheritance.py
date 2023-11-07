@@ -12,6 +12,12 @@ class City(Uuid, Value):
     def __len__(self): # Overwriting len for this object
         return self.__population
 
+    def __repr__(self):
+        return "Uuid: %s Value: %s" % (self.uuid(), self.value())
+
+    def __str__(self):
+        return self.value()
+
     def district(self) -> str: # public
         return self.__district
 
@@ -30,15 +36,17 @@ city = City('Matosinhos', 'Porto', 4400, 1500000)
 print(city.uuid())
 print(city.value())
 print(city.district())
-print(city.postalCode())
+print(city.postalCode()) 
 
-print(type(city.value()))
-print(type(city.district()))
-print(type(city.postalCode()))
+print(type(city.value())) # Outputs: <class 'str'>
+print(type(city.district())) # Outputs: <class 'str'>
+print(type(city.postalCode())) # Outputs: <class 'int'>
 
 city.set_district('Aveiro')
-print(city.district())
+print(city.district()) # Outputs: Aveiro
 
 # city.__set_postalCode(4300) -> as __set_postalCode is private not accessible
 
-print(len(city))
+print(len(city)) # Outputs: 1500000
+print(city) # Outputs: Matosinhos
+print([city]) # Outputs: [Uuid: 22365a2d-3c43-4791-982a-444be4e92a93 Value: Matosinhos]
