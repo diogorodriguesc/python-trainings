@@ -26,6 +26,7 @@ class City(Uuid, Value):
 
     def set_district(self, district) -> None: # public
         self.__district = district # private
+        self._reset_uuid()
 
     def __set_postalCode(self, postalCode) -> None: # public
         self.__postalCode = postalCode # private
@@ -44,6 +45,7 @@ print(type(city.postalCode())) # Outputs: <class 'int'>
 
 city.set_district('Aveiro')
 print(city.district()) # Outputs: Aveiro
+print(city.uuid())
 
 # city.__set_postalCode(4300) -> as __set_postalCode is private not accessible
 

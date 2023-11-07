@@ -4,3 +4,6 @@ class Value:
 
     def value(self):
         return self.__value
+    
+    def _set_value(self, value):
+        self.__value = value
