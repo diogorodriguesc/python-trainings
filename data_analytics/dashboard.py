@@ -19,8 +19,8 @@ df_filtered
 col1, col2 = st.columns(2)
 
 fig_date = px.bar(df_filtered, x="date", y="total", title="Expenses per date")
-col1.plotly_chart(fig_date)
+col1.plotly_chart(fig_date, use_container_width=True)
 
-type_total = df_filtered.groupby("type")[["total"]].sum()
-fig_type = px.bar(df_filtered, x="type", y="total", title="Expenses per type")
-col2.plotly_chart(fig_type)
+type_total = df_filtered.groupby("type")[["total"]].sum().reset_index()
+fig_type = px.bar(type_total, x="type", y="total", title="Expenses per type")
+col2.plotly_chart(fig_type, use_container_width=True)
