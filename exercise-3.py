@@ -8,4 +8,4 @@ if x == y:
 elif x < y:
     print("x is smaller than y")
 else:
-    printf("y is smaller than y")
+    print("y is smaller than y")
