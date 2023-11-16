@@ -13,13 +13,13 @@ class Solution:
                 letterIndexes[letter].append(index)
 
         palindromics = list()
-        for letterA in letterIndexes.keys():
-            if len(letterIndexes[letterA]) >= 3:
-                palindromics.append("%s%s%s" % (letterA, letterA, letterA))
+        for candidateBoundaryLetter in letterIndexes.keys():
+            if len(letterIndexes[candidateBoundaryLetter]) >= 3:
+                palindromics.append("%s%s%s" % (candidateBoundaryLetter, candidateBoundaryLetter, candidateBoundaryLetter))
             
-            for letterB in letterIndexes.keys():
-                if letterA is not letterB and len(letterIndexes[letterA]) >=2 and len(letterIndexes[letterB]) >= 1:
-                    palindromics.append("%s%s%s" % (letterA, letterB, letterA))
+            for candidateMiddleLetter in letterIndexes.keys():
+                if candidateBoundaryLetter is not candidateMiddleLetter and len(letterIndexes[candidateBoundaryLetter]) >= 2 and len(letterIndexes[candidateMiddleLetter]) >= 1 and min(letterIndexes[candidateBoundaryLetter]) < max(letterIndexes[candidateMiddleLetter]) and max(letterIndexes[candidateBoundaryLetter]) > min(letterIndexes[candidateMiddleLetter]):
+                    palindromics.append("%s%s%s" % (candidateBoundaryLetter, candidateMiddleLetter, candidateBoundaryLetter))
 
         print(palindromics)
 
@@ -27,4 +27,5 @@ class Solution:
 
 solution = Solution()
 
-print(solution.countPalindromicSubsequence("bbcbaba"))
+print(solution.countPalindromicSubsequence("bbcbaba")) # return 4 [OKAY!]
+print(solution.countPalindromicSubsequence("tlpjzdmtwderpkpmgoyrcxttiheassztncqvnfjeyxxp")) # should return 161 accordingly with leetcode - returning 189 with this version.
